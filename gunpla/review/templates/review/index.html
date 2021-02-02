@@ -1,9 +1,9 @@
+{% load static %}
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8" />
         <title>Gunpla</title>
-        {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'review/style.css' %}">
     </head>
     <body>
@@ -18,7 +18,7 @@
 			</tr>
             {% for item in data %}
             <tr>
-                <td>{{ item.filename }}</td>
+                <td><img src="{% static 'review/images/'%}{{ item.filename }}" class='boxart'/></td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.model }}</td>
                 <td>{{ item.grade }}</td>
