@@ -1,1 +1,29 @@
-성공!
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Gunpla</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+				<th>이미지</th>
+				<th>이름</th>
+				<th>모델</th>
+				<th>등급</th>
+				<th>설명</th>
+				<th>박스아트</th>
+			</tr>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.filename }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.grade }}</td>
+                <td>{{ item.description }}</td>
+                <td><img src='{{ item.boxart }}' /></td>
+            </tr>
+            {% endfor %}
+		</table>        
+    </body>
+</html>
