@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <title>Gunpla</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'review/style.css' %}">
     </head>
     <body>
         <table>
@@ -21,7 +23,7 @@
                 <td>{{ item.model }}</td>
                 <td>{{ item.grade }}</td>
                 <td>{{ item.description }}</td>
-                <td><img src='{{ item.boxart }}' /></td>
+                <td><img src='{{ item.boxart }}' class='boxart'/></td>
             </tr>
             {% endfor %}
 		</table>        
